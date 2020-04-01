@@ -17,7 +17,23 @@
 		E41A35842433DA8400C993B6 /* tableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41A35832433DA8400C993B6 /* tableViewModel.swift */; };
 		E41A358824340F7D00C993B6 /* oneLabelCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41A358724340F7D00C993B6 /* oneLabelCellView.swift */; };
 		E41A358A243419E500C993B6 /* twoLabelsCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41A3589243419E500C993B6 /* twoLabelsCellView.swift */; };
+		E41A358F2437955700C993B6 /* detailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41A358E2437955700C993B6 /* detailView.swift */; };
+		E41A35912437A40400C993B6 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41A35902437A40400C993B6 /* DetailViewModel.swift */; };
+		E41A35932437A64200C993B6 /* CellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41A35922437A64200C993B6 /* CellViewModel.swift */; };
+		E41A35952437A66200C993B6 /* TwoLabelCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41A35942437A66200C993B6 /* TwoLabelCellViewModel.swift */; };
+		E41A35972437A67F00C993B6 /* OneLabelCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41A35962437A67F00C993B6 /* OneLabelCellViewModel.swift */; };
+		E41A35A12437A86000C993B6 /* mvvm123Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41A35A02437A86000C993B6 /* mvvm123Tests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E41A35A32437A86000C993B6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E41A35592433D76300C993B6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E41A35602433D76300C993B6;
+			remoteInfo = mvvm123;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		E41A35612433D76300C993B6 /* mvvm123.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mvvm123.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -32,10 +48,25 @@
 		E41A35832433DA8400C993B6 /* tableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tableViewModel.swift; sourceTree = "<group>"; };
 		E41A358724340F7D00C993B6 /* oneLabelCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = oneLabelCellView.swift; sourceTree = "<group>"; };
 		E41A3589243419E500C993B6 /* twoLabelsCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = twoLabelsCellView.swift; sourceTree = "<group>"; };
+		E41A358E2437955700C993B6 /* detailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = detailView.swift; sourceTree = "<group>"; };
+		E41A35902437A40400C993B6 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
+		E41A35922437A64200C993B6 /* CellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellViewModel.swift; sourceTree = "<group>"; };
+		E41A35942437A66200C993B6 /* TwoLabelCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoLabelCellViewModel.swift; sourceTree = "<group>"; };
+		E41A35962437A67F00C993B6 /* OneLabelCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneLabelCellViewModel.swift; sourceTree = "<group>"; };
+		E41A359E2437A86000C993B6 /* mvvm123Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = mvvm123Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E41A35A02437A86000C993B6 /* mvvm123Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mvvm123Tests.swift; sourceTree = "<group>"; };
+		E41A35A22437A86000C993B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		E41A355E2433D76300C993B6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E41A359B2437A86000C993B6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -49,6 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				E41A35632433D76300C993B6 /* mvvm123 */,
+				E41A359F2437A86000C993B6 /* mvvm123Tests */,
 				E41A35622433D76300C993B6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -57,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				E41A35612433D76300C993B6 /* mvvm123.app */,
+				E41A359E2437A86000C993B6 /* mvvm123Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -64,10 +97,11 @@
 		E41A35632433D76300C993B6 /* mvvm123 */ = {
 			isa = PBXGroup;
 			children = (
-				E41A357C2433D80800C993B6 /* view */,
-				E41A35792433D7A800C993B6 /* model */,
+				E41A358D2437953F00C993B6 /* detailView */,
 				E41A35782433D78900C993B6 /* app */,
-				E41A35722433D76800C993B6 /* Info.plist */,
+				E41A357C2433D80800C993B6 /* cells */,
+				E41A35852433DAE600C993B6 /* TableView */,
+				E41A357A2433D7CE00C993B6 /* personModel.swift */,
 				E41A35812433D97F00C993B6 /* Obcerver.swift */,
 			);
 			path = mvvm123;
@@ -76,6 +110,7 @@
 		E41A35782433D78900C993B6 /* app */ = {
 			isa = PBXGroup;
 			children = (
+				E41A35722433D76800C993B6 /* Info.plist */,
 				E41A35642433D76300C993B6 /* AppDelegate.swift */,
 				E41A35662433D76300C993B6 /* SceneDelegate.swift */,
 				E41A356D2433D76800C993B6 /* Assets.xcassets */,
@@ -84,22 +119,16 @@
 			path = app;
 			sourceTree = "<group>";
 		};
-		E41A35792433D7A800C993B6 /* model */ = {
-			isa = PBXGroup;
-			children = (
-				E41A357A2433D7CE00C993B6 /* personModel.swift */,
-			);
-			path = model;
-			sourceTree = "<group>";
-		};
-		E41A357C2433D80800C993B6 /* view */ = {
+		E41A357C2433D80800C993B6 /* cells */ = {
 			isa = PBXGroup;
 			children = (
 				E41A358724340F7D00C993B6 /* oneLabelCellView.swift */,
 				E41A3589243419E500C993B6 /* twoLabelsCellView.swift */,
-				E41A35852433DAE600C993B6 /* TableView */,
+				E41A35922437A64200C993B6 /* CellViewModel.swift */,
+				E41A35942437A66200C993B6 /* TwoLabelCellViewModel.swift */,
+				E41A35962437A67F00C993B6 /* OneLabelCellViewModel.swift */,
 			);
-			path = view;
+			path = cells;
 			sourceTree = "<group>";
 		};
 		E41A35852433DAE600C993B6 /* TableView */ = {
@@ -109,6 +138,24 @@
 				E41A35832433DA8400C993B6 /* tableViewModel.swift */,
 			);
 			path = TableView;
+			sourceTree = "<group>";
+		};
+		E41A358D2437953F00C993B6 /* detailView */ = {
+			isa = PBXGroup;
+			children = (
+				E41A358E2437955700C993B6 /* detailView.swift */,
+				E41A35902437A40400C993B6 /* DetailViewModel.swift */,
+			);
+			path = detailView;
+			sourceTree = "<group>";
+		};
+		E41A359F2437A86000C993B6 /* mvvm123Tests */ = {
+			isa = PBXGroup;
+			children = (
+				E41A35A02437A86000C993B6 /* mvvm123Tests.swift */,
+				E41A35A22437A86000C993B6 /* Info.plist */,
+			);
+			path = mvvm123Tests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -131,6 +178,24 @@
 			productReference = E41A35612433D76300C993B6 /* mvvm123.app */;
 			productType = "com.apple.product-type.application";
 		};
+		E41A359D2437A86000C993B6 /* mvvm123Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E41A35A52437A86000C993B6 /* Build configuration list for PBXNativeTarget "mvvm123Tests" */;
+			buildPhases = (
+				E41A359A2437A86000C993B6 /* Sources */,
+				E41A359B2437A86000C993B6 /* Frameworks */,
+				E41A359C2437A86000C993B6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E41A35A42437A86000C993B6 /* PBXTargetDependency */,
+			);
+			name = mvvm123Tests;
+			productName = mvvm123Tests;
+			productReference = E41A359E2437A86000C993B6 /* mvvm123Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -143,6 +208,10 @@
 				TargetAttributes = {
 					E41A35602433D76300C993B6 = {
 						CreatedOnToolsVersion = 11.4;
+					};
+					E41A359D2437A86000C993B6 = {
+						CreatedOnToolsVersion = 11.4;
+						TestTargetID = E41A35602433D76300C993B6;
 					};
 				};
 			};
@@ -160,6 +229,7 @@
 			projectRoot = "";
 			targets = (
 				E41A35602433D76300C993B6 /* mvvm123 */,
+				E41A359D2437A86000C993B6 /* mvvm123Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -174,6 +244,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E41A359C2437A86000C993B6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -183,7 +260,12 @@
 			files = (
 				E41A357B2433D7CE00C993B6 /* personModel.swift in Sources */,
 				E41A35652433D76300C993B6 /* AppDelegate.swift in Sources */,
+				E41A35932437A64200C993B6 /* CellViewModel.swift in Sources */,
 				E41A358A243419E500C993B6 /* twoLabelsCellView.swift in Sources */,
+				E41A35952437A66200C993B6 /* TwoLabelCellViewModel.swift in Sources */,
+				E41A35912437A40400C993B6 /* DetailViewModel.swift in Sources */,
+				E41A358F2437955700C993B6 /* detailView.swift in Sources */,
+				E41A35972437A67F00C993B6 /* OneLabelCellViewModel.swift in Sources */,
 				E41A358824340F7D00C993B6 /* oneLabelCellView.swift in Sources */,
 				E41A35672433D76300C993B6 /* SceneDelegate.swift in Sources */,
 				E41A35842433DA8400C993B6 /* tableViewModel.swift in Sources */,
@@ -192,7 +274,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E41A359A2437A86000C993B6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E41A35A12437A86000C993B6 /* mvvm123Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E41A35A42437A86000C993B6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E41A35602433D76300C993B6 /* mvvm123 */;
+			targetProxy = E41A35A32437A86000C993B6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		E41A356F2433D76800C993B6 /* LaunchScreen.storyboard */ = {
@@ -256,7 +354,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.3;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -310,7 +408,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -326,7 +424,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2NTR4NS3YP;
-				INFOPLIST_FILE = mvvm123/Info.plist;
+				INFOPLIST_FILE = mvvm123/app/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -344,7 +442,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2NTR4NS3YP;
-				INFOPLIST_FILE = mvvm123/Info.plist;
+				INFOPLIST_FILE = mvvm123/app/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -353,6 +451,48 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		E41A35A62437A86000C993B6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2NTR4NS3YP;
+				INFOPLIST_FILE = mvvm123Tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cham.-.mvvm123Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/mvvm123.app/mvvm123";
+			};
+			name = Debug;
+		};
+		E41A35A72437A86000C993B6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2NTR4NS3YP;
+				INFOPLIST_FILE = mvvm123Tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cham.-.mvvm123Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/mvvm123.app/mvvm123";
 			};
 			name = Release;
 		};
@@ -373,6 +513,15 @@
 			buildConfigurations = (
 				E41A35762433D76800C993B6 /* Debug */,
 				E41A35772433D76800C993B6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E41A35A52437A86000C993B6 /* Build configuration list for PBXNativeTarget "mvvm123Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E41A35A62437A86000C993B6 /* Debug */,
+				E41A35A72437A86000C993B6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

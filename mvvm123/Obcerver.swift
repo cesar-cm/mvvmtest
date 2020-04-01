@@ -4,11 +4,11 @@ import Foundation
 
 class Obcerver<T> {
     typealias Listener = (T) -> Void
-    var listener: Listener?
+    var next: Listener?
     
     var value : T {
         didSet {
-            listener?(value)
+            next?(value)
         }
     }
     
@@ -16,8 +16,8 @@ class Obcerver<T> {
         self.value = value
     }
     
-    func bind(listener: Listener?) {
-        self.listener = listener
-        listener?(value)
+    func subscribe(next: Listener?) {
+        self.next = next
+        next?(value)
     }
 }

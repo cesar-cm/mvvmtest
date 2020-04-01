@@ -11,12 +11,12 @@ class TableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.estimatedRowHeight = 20.0
+        tableView.estimatedRowHeight = 40.0
         tableView.rowHeight = UITableView.automaticDimension
         
         self.tableViewModel = TableViewModel()
         
-        tableViewModel?.rows?.bind(listener: { _ in
+        tableViewModel?.rows?.subscribe(next: { _ in
             self.tableView.reloadData()
         })
         
@@ -33,7 +33,10 @@ class TableViewController: UITableViewController {
     
     func style() {
         self.title = "My List"
-        self.navigationController?.navigationBar.tintColor = #colorLiteral(red: 0.1411764771, green: 0.3960784376, blue: 0.5647059083, alpha: 1)
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        navigationController?.navigationBar.tintColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        navigationController?.navigationBar.barTintColor = #colorLiteral(red: 0.05882352963, green: 0.180392161, blue: 0.2470588237, alpha: 1)
+        navigationController?.navigationBar.isTranslucent = false
     }
     
     func addActions() {
@@ -67,7 +70,7 @@ class TableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var cell = UITableViewCell()
         
-        if let model = tableViewModel?.getCellModel(section: indexPath.section, row: indexPath.row) {
+        if let model = tableViewModel?.getCellViewModel(section: indexPath.section, row: indexPath.row) {
             switch model.associatedType {
             case .OneLabelCellViewModel:
                 
@@ -90,5 +93,15 @@ class TableViewController: UITableViewController {
         }
         
         return cell
+    }
+    
+    // navigation
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let viewModel = tableViewModel?.getDetailViewModel(section: indexPath.section, row: indexPath.row) else {
+            return
+        }
+        
+        let view = DetailView(viewModel: viewModel)
+        navigationController?.pushViewController(view, animated: true)
     }
 }
